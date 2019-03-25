@@ -1,5 +1,5 @@
 <!-- Image and text -->
-<nav style="background-color: #00897b; size: 60%;">
+<nav style="background-color: #00897b; size: 90%;">
     <a class="navbar-brand" href="{% url 'index_page' %}">
     </a>
       <form class="form-inline my-2 my-lg-0" role="search" action="{% url 'search' %}" style="float: right; padding-right: 10%;">
@@ -12,19 +12,14 @@
                 <a style="font-size:large;color:whitesmoke" href="#" class="dropdown-toggle btn btn-outline-primary" data-toggle="dropdown" role="button" aria-expanded="false">Account
                     <span class="caret"></span>
                 </a> -->
-                <ul class="row" role="menu" style="display: inline;">
-                    <li>
-                        <a href="{%url 'index_page'%}"><button>Home</button></a>
-                    </li>
-               
-                    <li>
-                        <a href="/accounts/password/change"><button>Change Password</button></a>
-                    </li>
-                    <li>
-                        <a href="/logout"><button>Logout</button></a>
-                    </li>
-                </ul>
-        
+            <div class="w3-show-inline-block">
+              <div class="w3-bar">  
+                        <a href="{%url 'index_page'%}"><button class="w3-btn w3-black"
+                            >Home</button></a>
+                        <a href="/accounts/password/change"><button class="w3-btn w3-black">Change Password</button></a>
+                        <a href="/logout"><button class="w3-btn w3-black">Logout</button></a>
+              </div>
+            </div>
         {% else %}
         <li>
             <a class='btn btn-default' href="/accounts/login">Login</a>
