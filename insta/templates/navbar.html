@@ -1,0 +1,37 @@
+<!-- Image and text -->
+<nav style="background-color: #00897b ">
+    <a class="navbar-brand" href="{% url 'index_page' %}">
+    </a>
+    <form class="form-inline my-2 my-lg-0" role="search" action="{% url 'search' %}">
+        <input type="text" class="form-control my-2 my-sm-0 search-input" name="search" placeholder="Search username" id="search">
+        <button class="btn btn-outline-primary" style="color:whitesmoke" >Submit</button>
+    </form>
+        {% if user.is_authenticated %}
+        <ul>
+            <li class="dropdown" style="list-style-type: none;font-size: x-large;">
+                <a style="font-size:large;color:whitesmoke" href="#" class="dropdown-toggle btn btn-outline-primary" data-toggle="dropdown" role="button" aria-expanded="false">Account
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li>
+                        <a href="{%url 'index_page'%}">Home</a>
+                    </li>
+               
+                    <li>
+                        <a href="/accounts/password/change">Change Password</a>
+                    </li>
+                    <li>
+                        <a href="/logout">Logout</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        {% else %}
+        <li>
+            <a class='btn btn-default' href="/accounts/login">Login</a>
+        </li>
+
+        {% endif %}
+    </div>
+
+</nav>

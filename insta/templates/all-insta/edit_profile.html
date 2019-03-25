@@ -1,0 +1,25 @@
+{%extends 'all-insta/base.html'%}
+{% load bootstrap3 %}
+{% block content %}
+<div class="container">
+    <div class="row edit-profile">
+        <div class="col-md-4 edit-areas">
+            <div class="profile" style="padding-top:70px;">
+                <h3>Profile picture</h3>
+                <img src="{{user.profile.Profile_photo.url}}"  alt="img" width="320px" height="220px ">
+            </div>
+            <br>
+            <h4>Bio</h4>
+            <br>
+            <h3>{{user.profile.Bio}}</h3>
+        </div>
+        <div class="col-md-8">
+            <form action="{% url 'edit' %}" style="width: 50%" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                <input type="submit" class="btn btn-outline-primary" value="Update">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

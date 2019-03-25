@@ -1,0 +1,56 @@
+{%extends "registration/base.html"%}
+{% load bootstrap3 %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <!-- Empty div -->
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            {% if form.errors %}
+            <p> Incorrect password </p>
+            {% endif %}
+            <div class="card" id="top">
+
+                <div class="card-header text-center" id="login">
+                    <div class="row">
+                        <div class="col-md-2">
+                        </div>
+                        <div class="col-md-4"></div>
+                    </div>
+                    <div class="card-body">
+
+                        <form  action="/accounts/login/" method="post">
+                            {% csrf_token %}
+                            {% bootstrap_form form%}
+
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-light btn-sm" value="Log in" style="padding-left: 100px;padding-right: 100px; background-color:#3897f0;color:whitesmoke;">
+                            </div>
+
+                            <input type="hidden" name="next" value="{{next}}">
+
+                        </form>
+
+                    </div>
+                    <p style="color:salmon">Don't have an account? <a class = "btn btn-outline-primary" href="/accounts/register/">sign-up</a></p>
+                    <p>Get the app.</p>
+                    <a href="#"><img src="https://res.cloudinary.com/jorpdesigns/image/upload/v1533403096/download-appstore.png
+         https://res.cloudinary.com/jorpdesigns/image/upload/v1533403096/download-appstore.png
+         "
+                            alt="Download on App Store" /></a>
+                    <a href="#"><img src="https://res.cloudinary.com/jorpdesigns/image/upload/v1533403096/download-googleplay.png
+         https://res.cloudinary.com/jorpdesigns/image/upload/v1533403096/download-googleplay.png
+         "
+                            alt="Download on Google Play" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- empty div -->
+</div>
+</div>
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4"></div>
+</div>
+{% endblock %}
