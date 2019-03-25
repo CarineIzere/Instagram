@@ -22,19 +22,15 @@
             </a>
 
             {% for item in image %}
-            <img class="card-img-top img-responsive" src="{{item.Image.url}}" style="height:350px;width:450px;border-radius:50%;display: block; margin-left: auto;
+            <img class="card-img-top img-responsive" src="{{item.Image.url}}" style="height:350px;width:450px;display: block; margin-left: auto;
             margin-right: auto; width: 50%;"/>
 
             <div class="card-body">
-                <div class="row" id="like">
-                    <div class="">
                         <span class="likes">
                             <i class="fa fa-heart" aria-hidden="true" style="font-size:80px;"></i>
                         </span><br>5
                         <span class="count">Likes
                         </span>
-                    </div>
-                </div>
                 {% endfor %}
                 <p><strong>{{item.user.username}}</strong> {{item.Image_caption}}</p>
                 <p class="card-text" style="font-size:x-large;color:black;"><small class="text-muted">Uploaded
