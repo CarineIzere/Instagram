@@ -1,8 +1,8 @@
 <!-- Image and text -->
-<nav style="background-color: #00897b; size: 90%;">
+<nav style="background-color: #00897b; min-height: 80px;;">
     <a class="navbar-brand" href="{% url 'index_page' %}">
     </a>
-      <form class="form-inline my-2 my-lg-0" role="search" action="{% url 'search' %}" style="float: right; padding-right: 10%;">
+      <form class="form-inline my-2 my-lg-0" role="search" action="{% url 'search' %}" style="float: right; padding-right: 10%; line-height: 20px; padding-top: 20px; padding-bottom: 20px;">
         <input type="text" class="form-control my-2 my-sm-0 search-input" name="search" placeholder="Search username" id="search">
         <button class="btn btn-outline-primary" style="color:whitesmoke" >Submit</button>
       </form>
@@ -12,7 +12,7 @@
                 <a style="font-size:large;color:whitesmoke" href="#" class="dropdown-toggle btn btn-outline-primary" data-toggle="dropdown" role="button" aria-expanded="false">Account
                     <span class="caret"></span>
                 </a> -->
-            <div class="w3-show-inline-block">
+            <div class="w3-show-inline-block" style="line-height: 20px; padding-top: 20px; padding-bottom: 20px;">
               <div class="w3-bar">  
                         <a href="{%url 'index_page'%}"><button class="w3-btn w3-black"
                             >Home</button></a>
