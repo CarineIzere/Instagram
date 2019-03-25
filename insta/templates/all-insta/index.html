@@ -22,14 +22,16 @@
             </a>
 
             {% for item in image %}
-            <img class="card-img-top img-responsive" src="{{item.Image.url}}" style="height:350px;width:450px;border-radius:50%; text-align: center;" />
+            <img class="card-img-top img-responsive" src="{{item.Image.url}}" style="height:350px;width:450px;border-radius:50%;display: block; margin-left: auto;
+            margin-right: auto; width: 50%;"/>
 
             <div class="card-body">
                 <div class="row" id="like">
                     <div class="">
                         <span class="likes">
+                            <i class="fa fa-heart" aria-hidden="true" style="font-size:80px;"></i>
                         </span><br>5
-                        </span>Likes
+                        <span class="count">Likes
                         </span>
                     </div>
                 </div>
