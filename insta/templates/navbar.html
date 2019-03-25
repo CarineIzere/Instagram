@@ -1,31 +1,30 @@
 <!-- Image and text -->
-<nav style="background-color: #00897b ">
+<nav style="background-color: #00897b; size: 60%;">
     <a class="navbar-brand" href="{% url 'index_page' %}">
     </a>
-      <form class="form-inline my-2 my-lg-0" role="search" action="{% url 'search' %}">
+      <form class="form-inline my-2 my-lg-0" role="search" action="{% url 'search' %}" style="float: right; padding-right: 10%;">
         <input type="text" class="form-control my-2 my-sm-0 search-input" name="search" placeholder="Search username" id="search">
         <button class="btn btn-outline-primary" style="color:whitesmoke" >Submit</button>
       </form>
         {% if user.is_authenticated %}
-        <ul>
-            <li class="dropdown" style="list-style-type: none;font-size: x-large;">
+        
+            <!-- <li class="dropdown" style="list-style-type: none;font-size: x-large;">
                 <a style="font-size:large;color:whitesmoke" href="#" class="dropdown-toggle btn btn-outline-primary" data-toggle="dropdown" role="button" aria-expanded="false">Account
                     <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu" role="menu">
+                </a> -->
+                <ul class="row" role="menu">
                     <li>
-                        <a href="{%url 'index_page'%}">Home</a>
+                        <a href="{%url 'index_page'%}"><button>Home</button></a>
                     </li>
                
                     <li>
-                        <a href="/accounts/password/change">Change Password</a>
+                        <a href="/accounts/password/change"><button>Change Password</button></a>
                     </li>
                     <li>
-                        <a href="/logout">Logout</a>
+                        <a href="/logout"><button>Logout</button></a>
                     </li>
                 </ul>
-            </li>
-        </ul>
+        
         {% else %}
         <li>
             <a class='btn btn-default' href="/accounts/login">Login</a>
