@@ -14,7 +14,10 @@
         `See your profile with all my pictures.
         `Follow other users and see their pictures on my timeline.
         `Like a picture and leave a comment on it.
- 
+
+ ## Live Demo
+
+https://carineinstagram.herokuapp.com/
 
 # INSTALATION REQUIREMENTS
 
@@ -96,6 +99,14 @@ September 28, 2018 - 12:01:08
 Django version 1.11, using settings 'gallery.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
+
+## Known bugs, 
+
+No known bugs
+
+## support and Contacts
+
+Incase of any bugs contact me at carizeree@gmail.com or call on +250783706421
 
 ## License Copyright (c) 2018 Carine Izere
 
