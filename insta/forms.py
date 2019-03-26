@@ -17,3 +17,10 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ['name']
+
+class NewImageForm(forms.ModelForm):
+    class Meta:
+        model = Image
+        exclude = ['image_name', 'pub_date','profile','user']
+        # widgets = {
+        #     'likes': forms.CheckboxSelectMultiple(),

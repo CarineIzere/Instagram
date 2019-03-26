@@ -8,6 +8,7 @@ urlpatterns=[
     url('^$',views.index,name = 'index_page'),
     url(r'^profile/(?P<username>\w+)', views.profile, name='profile'),
     url(r'^edit/$', views.edit, name='edit'),
+    url(r'^new/image$', views.new_image, name='new-image'),
     url(r'^upload/$', views.upload_image, name='upload_image'),
     url(r'^search/', views.search, name='search'),
     url(r'^comment/(?P<image_id>\d+)', views.one_image, name='comment'),

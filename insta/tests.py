@@ -7,7 +7,7 @@ class profileTestCLass(TestCase):
     setup self instance of image
     '''
     def setUp(self):
-        self.prof = Profile(Bio='')
+        self.prof = Profile(Bio='bio')
     
     ''' 
     test instance of image
@@ -25,7 +25,7 @@ class CommentTestCase(TestCase):
     setup
     '''
     def setUp(self):
-        self.comment = Comment(name='lovable')
+        self.comment = Comment(name='comment')
     '''
     test instance of comment
     '''

@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect,get_object_or_404
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from .models import Image,Profile
-from .forms import ProfileForm, ImageForm, CommentForm
+from .forms import ProfileForm, ImageForm, CommentForm, NewImageForm
 from django.contrib.auth.models import User
 
 # Create your views here.
@@ -56,6 +56,22 @@ def view_image(request):
     '''
     searching for profile
     '''
+@login_required(login_url='/accounts/login/')
+def new_image(request):
+    current_user = request.user
+    if request.method == 'POST':
+        form = NewImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            image = form.save(commit=False)
+            image.profile = current_user.profile
+            image.user = current_user
+
+            image.save()
+        return redirect('index_page')
+
+    else:
+        form = NewImageForm()
+    return render(request, 'new_image.html', {"form": form})
 def search(request):
     if 'search' in request.GET and request.GET['search']:
         search_term = request.GET.get('search')
