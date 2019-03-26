@@ -41,23 +41,23 @@ https://carineinstagram.herokuapp.com/
         Type git clone, and then paste the URL you copied in Step 2.
         git clone https://github.com/CarineIzere/Instagram.git Press Enter.
 
-#CREATING A DATABASE
+#  CREATING A DATABASE
 
         psql
         CREATE DATABASE instagram;
         connect to the database \c instagram;
         check if tables have been created \dt
 
-#RUN MIGRATIONS
+#  RUN MIGRATIONS
 
         python3.6 manage.py migrate
         python3.6 manage.py makemigrations insta
 
-#RUNNING THE APP
+#  RUNNING THE APP
 
         python3.6 manage.py runserver
 
-#TESTING
+#  TESTING
 
         python3.6 manage.py test insta
 
