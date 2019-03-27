@@ -6,7 +6,7 @@
      Carine Izere
 # DESCRIPTION
 
-        This is a Instagram clone application that is used to display images.
+        This is a Instagram application that is used to display images.
         The application is build with Django Framework in Pthyon.
         As a user of the application you should be able to:
         `Sign in to the application to start using.
