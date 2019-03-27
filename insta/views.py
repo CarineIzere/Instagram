@@ -39,7 +39,7 @@ def edit(request):
             return redirect('index_page')
     else:
         form = ProfileForm()
-    return render(request, 'all-insta/edit_profile.html', {'form':form})
+    return render(request, 'template/edit_profile.html', {'form':form})
     '''
     logs out current user from account
     '''
