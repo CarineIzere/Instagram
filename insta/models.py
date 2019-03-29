@@ -70,6 +70,7 @@ class Comment(models.Model):
     name = models.CharField(max_length=30)
     user = models.ForeignKey(User,null = True)
     image = models.ForeignKey(Image,related_name='comment')
+    Image_caption = models.TextField(max_length =100)
 
 
     def __str__(self):
